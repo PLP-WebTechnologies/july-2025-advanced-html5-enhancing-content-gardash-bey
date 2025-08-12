@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced HTML5 Content & Form</title>
+</head>
+<body>
+    <header>
+        <h1>HTML5 Content & Form Showcase</h1>
+        <p>Demonstrating advanced HTML5 content elements and a feature-rich, accessible form.</p>
+    </header>
+
+    <main>
+        <section aria-labelledby="lists-section">
+            <h2 id="lists-section">Organizing Content with Lists</h2>
+            <h3>Favorite Programming Languages (Ordered List)</h3>
+            <ol>
+                <li>Rust</li>
+                <li>TypeScript</li>
+                <li>Kotlin</li>
+                <li>Swift</li>
+                <li>Ruby</li>
+            </ol>
+            <h3>Web Technologies (Unordered List)</h3>
+            <ul>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>GraphQL</li>
+                <li>Docker</li>
+            </ul>
+            <h3>HTML5 Features (Description List)</h3>
+            <dl>
+                <dt>Custom Elements</dt>
+                <dd>Build your own HTML tags for reusable components.</dd>
+                <dt>Native Drag & Drop</dt>
+                <dd>Enable intuitive file and object movement in the browser.</dd>
+                <dt>Geolocation API</dt>
+                <dd>Access device location for maps and local content.</dd>
+            </dl>
+        </section>
+
+        <section aria-labelledby="table-section">
+            <h2 id="table-section">Upcoming Tech Meetups</h2>
+            <table>
+                <caption>Gardash's 2025 Tech Events</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">Date</th>
+                        <th scope="col">Event</th>
+                        <th scope="col">Host</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Feb 15</td>
+                        <td>Rustaceans Gathering</td>
+                        <td>Elena Ivanova</td>
+                    </tr>
+                    <tr>
+                        <td>Apr 10</td>
+                        <td>GraphQL Summit</td>
+                        <td>Ali Reza</td>
+                    </tr>
+                    <tr>
+                        <td>Sep 22</td>
+                        <td>Fullstack Night</td>
+                        <td>Gardash Bey</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section aria-labelledby="media-section">
+            <h2 id="media-section">Personal Media</h2>
+            <div>
+                <figure>
+                    <img src="camara.jpg" alt="Camara's Logo" width="200" height="120">
+                    <figcaption>Logo of camara's legacy homes</figcaption>
+                </figure>
+                <figure>
+                    <audio controls>
+                        <source src="6.2c.mp3" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <figcaption>Favorite Audio</figcaption>
+                </figure>
+                <figure>
+                    <video width="200" height="120" controls>
+                        <source src="Ultimate.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                    <figcaption>Fullstack Roadmap video</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section aria-labelledby="form-section">
+            <h2 id="form-section">Contact Gardash</h2>
+            <form action="#" method="post" autocomplete="on" novalidate>
+                <fieldset>
+                    <legend>Your Details</legend>
+                    <label for="fullname">Your Name *</label>
+                    <input type="text" id="fullname" name="fullname" placeholder="e.g. Gardash Bey" required minlength="3" autocomplete="name">
+
+                    <label for="email">Email Address *</label>
+                    <input type="email" id="email" name="email" placeholder="e.g. gardash@email.com" required autocomplete="email">
+
+                    <label for="dob">Birthday *</label>
+                    <input type="date" id="dob" name="dob" required>
+
+                    <label for="phone">Mobile Number</label>
+                    <input type="tel" id="phone" name="phone" placeholder="e.g. +2207834500" pattern="\+?\d{10,15}" autocomplete="tel">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Message Preferences</legend>
+                    <label for="subject">Subject *</label>
+                    <input type="text" id="subject" name="subject" required minlength="4" maxlength="40" placeholder="e.g. Collaboration Inquiry">
+
+                    <label for="contact-method">Preferred Contact Method *</label>
+                    <select id="contact-method" name="contact-method" required>
+                        <option value="">-- Select Method --</option>
+                        <option value="email">Email</option>
+                        <option value="phone">Phone</option>
+                        <option value="LinkedIn">LinkedIn</option>
+                        <option value="WhatsApp">WhatsApp</option>
+                    </select>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Newsletter & Updates</legend>
+                    <label>Subscribe to project updates?</label>
+                    <input type="checkbox" id="newsletter" name="newsletter">
+                    <label for="newsletter">Yes, keep me informed!</label>
+
+                    <label>How did you find me?</label>
+                    <input type="radio" id="find-friend" name="findme" value="friend" required>
+                    <label for="find-friend">Friend</label>
+                    <input type="radio" id="find-search" name="findme" value="search">
+                    <label for="find-search">Search Engine</label>
+                    <input type="radio" id="find-social" name="findme" value="social">
+                    <label for="find-social">Social Media</label>
+                    <input type="radio" id="find-other" name="findme" value="other">
+                    <label for="find-other">Other</label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Additional Message</legend>
+                    <label for="bio">Your Message</label>
+                    <textarea id="bio" name="bio" rows="3" maxlength="300" placeholder="Write your message here..."></textarea>
+
+                    <label for="referral">Contact Code</label>
+                    <input type="text" id="referral" name="referral" value="GB2025" readonly>
+                </fieldset>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Gardash Bey. All rights reserved.</p>
+    </footer>
+</body>
+</html>
